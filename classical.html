@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classical - Rock & Roll Vibes</title>
+<link rel="stylesheet" href="IONOW.css">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+/* same styles as rock.html template */
+body { margin:0;padding:0;font-family:'Rock Salt',cursive;color:#fff;background-image:url('https://i.pinimg.com/736x/a5/d7/4e/a5d74e89d8690687fc16d99b5967e127.jpg');background-size:cover;background-position:center;background-attachment:fixed;min-height:100vh;}
+.navbar {position:fixed;top:0;width:100%;background:rgba(0,0,0,0.7);padding:10px 0;text-align:center;z-index:2000;}
+.nav-btn {color:white;text-decoration:none;margin:0 15px;font-size:18px;transition:0.3s;}
+.nav-btn:hover {color:#ff3b3b;}
+.container {margin-top:80px;text-align:center;padding:20px;}
+h2 {font-size:2em;margin-bottom:20px;text-shadow:2px 2px #ff0000, 4px 4px #ff9900;}
+.message-card {background:rgba(0,0,0,0.7);padding:15px;border-radius:12px;margin:10px auto;max-width:600px;text-align:left;border-left:4px solid #ff3b3b;}
+.message-card strong {color:#ffd700;}
+.go-back {margin-top:30px;padding:12px 25px;background-color:#ff3b3b;color:white;border:none;border-radius:10px;cursor:pointer;text-transform:uppercase;box-shadow:0 0 15px #ff3b3b;transition:0.3s;}
+.go-back:hover {background-color:#d62d2d;transform:scale(1.05);box-shadow:0 0 25px #ff3b3b;}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<a href="FINGER.html" class="nav-btn">Home</a>
+<a href="about.html" class="nav-btn">About Us</a>
+<a href="contact.html" class="nav-btn">Contact Us</a>
+<a href="function.html" class="nav-btn">Genres</a>
+<a href="morefunction.html" class="nav-btn">Voting</a>
+<a href="#" class="nav-btn" onclick="logout()">Logout</a>
+</nav>
+<div class="container">
+<h2>Classical Genre Votes</h2>
+<div id="messagesContainer"></div>
+<button class="go-back" onclick="window.location.href='function.html'">Go Back</button>
+</div>
+<script>
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if(!loggedInUser){alert("Please log in first.");window.location.href='account.html';}
+function logout(){localStorage.removeItem('loggedInUser');window.location.href='account.html';}
+const genreKey = "classical_messages";
+const messagesContainer = document.getElementById('messagesContainer');
+let messages = JSON.parse(localStorage.getItem(genreKey)) || [];
+if(messages.length===0){messagesContainer.innerHTML="<p>No messages submitted yet.</p>";}
+else{messages.forEach(msg=>{const div=document.createElement('div');div.className="message-card";div.innerHTML=`<strong>${msg.user}:</strong> ${msg.message}`;messagesContainer.appendChild(div);});}
+</script>
+</body>
+</html>

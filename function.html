@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="IONOW.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock & Roll Vibes - Genres</title>
+
+<!-- Rock & Roll Font -->
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Rock Salt', cursive;
+        color: #fff;
+        background-image: url('https://i.pinimg.com/736x/a5/d7/4e/a5d74e89d8690687fc16d99b5967e127.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 0;
+        text-align: center;
+        z-index: 2000;
+    }
+
+    .nav-btn {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+        color: #ff3b3b;
+    }
+
+    #welcomeMessage {
+        text-align: center;
+        margin-top: 70px;
+        font-size: 18px;
+        color: #ffd700;
+        text-shadow: 1px 1px #ff0000;
+    }
+
+    .members-section {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .members-section h2 {
+        font-size: 2.5em;
+        text-shadow: 2px 2px #ff0000, 4px 4px #ff9900;
+        margin-bottom: 10px;
+    }
+
+    .members-section p {
+        color: #ffd700;
+        text-shadow: 1px 1px #ff0000;
+        font-size: 1.2em;
+    }
+
+    .members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 25px;
+        padding: 40px;
+        justify-items: center;
+    }
+
+    .member-card {
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid #ff0000;
+        border-radius: 12px;
+        width: 220px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+
+    .member-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #ff3b3b;
+    }
+
+    .member-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .member-card h3 {
+        color: #ff9900;
+        margin: 10px 0 5px;
+    }
+
+    .member-card p {
+        color: #ddd;
+        font-size: 14px;
+        padding: 0 10px 15px;
+    }
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+  <a href="FINGER.html" class="nav-btn">Home</a>
+  <a href="about.html" class="nav-btn">About Us</a>
+  <a href="contact.html" class="nav-btn">Contact Us</a>
+  <a href="function.html" class="nav-btn">Genres</a>
+  <a href="morefunction.html" class="nav-btn">Voting</a>
+  <a href="#" class="nav-btn" onclick="logout()">Logout</a>
+</nav>
+
+<p id="welcomeMessage"></p>
+
+<section class="members-section">
+  <h2>MUSIC GENRE DESCRIPTION</h2>
+  <p>User's different opinion on music</p>
+
+  <div class="members-grid">
+    <a href="rock.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/12/34/e7/1234e72c2b1b169d1945f69b1ba1a047.jpg">
+      <h3>Rock</h3>
+      <p>Strong backbeat, electric guitar-driven sound, and classic energy.</p>
+    </a>
+    <a href="rnb.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/db/14/a3/db14a3c8825a086f9bb815ca61a2843a.jpg">
+      <h3>R&B</h3>
+      <p>Blends blues, jazz, and gospel — soulful vocals and emotional lyrics.</p>
+    </a>
+    <a href="reggae.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/d7/55/4f/d7554f5385ebdf65d6d33d4c2e4158f1.jpg">
+      <h3>Reggae</h3>
+      <p>Off-beat rhythm, deep bass lines, and the iconic skank beat.</p>
+    </a>
+    <a href="jazz.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/7f/2c/29/7f2c294b2a036600e717c8a155e44d79.jpg">
+      <h3>Jazz</h3>
+      <p>Complex harmonies, syncopated rhythms, and smooth improvisation.</p>
+    </a>
+    <a href="country.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/84/26/22/842622fbe63270355bd01b1b2d94d7c9.jpg">
+      <h3>Country</h3>
+      <p>Ballads and tunes about love, heartache, and life in the countryside.</p>
+    </a>
+    <a href="electronic.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/68/e1/58/68e1583ca5c5a418ac360b586dcab88d.jpg">
+      <h3>Electronic</h3>
+      <p>Fast tempos, heavy bass, and futuristic rhythms.</p>
+    </a>
+    <a href="classical.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/e8/0b/8e/e80b8e7942a117718bf0ca5497bc40c0.jpg">
+      <h3>Classical</h3>
+      <p>Baroque, Romantic, and timeless orchestral masterpieces.</p>
+    </a>
+    <a href="hiphop.html" class="member-card">
+      <img src="https://i.pinimg.com/1200x/1c/3c/df/1c3cdf924e3067d047116fe544877f28.jpg">
+      <h3>Hip-Hop</h3>
+      <p>Rhythmic beats, creative rhymes, and pure urban expression.</p>
+    </a>
+    <a href="pop.html" class="member-card">
+      <img src="https://i.pinimg.com/736x/5b/3c/bc/5b3cbcee14b57cd55712a8bdcf90eed8.jpg">
+      <h3>Pop</h3>
+      <p>Catchy hooks, simple lyrics, and melodies that stick in your head.</p>
+    </a>
+  </div>
+</section>
+
+<script>
+// Check if user is logged in
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if(!loggedInUser){
+    alert("Please log in first to view genres.");
+    window.location.href = 'account.html';
+} else {
+    document.getElementById('welcomeMessage').innerText = `Welcome, ${loggedInUser.username} (Age: ${loggedInUser.age})`;
+}
+
+// Logout function
+function logout(){
+    localStorage.removeItem('loggedInUser');
+    window.location.href = 'account.html';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Fixed navbar styling */
+.navbar {
+  position: fixed;       /* Stay fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;          /* Fixed height */
+  background-color: ; /* Dark gray */
+  display: flex;
+  justify-content: space-between; /* Left and right sections */
+  align-items: center;    /* Vertical center */
+  padding: 0 20px;        /* Horizontal padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Container for right-side buttons */
+.nav-right {
+  display: flex;
+}
+
+/* Navbar buttons */
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 9px 15px;
+  margin-left: 8px;      /* Space between right-side buttons */
+  border-radius: 4px;
+  background-color: ; /* Button color */
+  transition: background-color 0.3s;
+  white-space: nowrap;     /* Prevent text wrap */
+}
+
+.nav-btn:hover {
+  background-color: #0046FF; /* Hover color */
+}
+
+/* Page content */
+.content {
+  margin-top: 60px;        /* Same as navbar height */
+  padding: 20px;
+}
+
+.members-section {
+  text-align: center;
+  padding: 60px 20px;
+
+
+}
+
+.members-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white /* Accent color like in image */
+}
+
+.members-section p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Grid layout */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background-color: #1f2937; /* Slightly lighter card */
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Image placeholder */
+.member-img {
+  width: 100%;
+  padding-top: 100%; /* Square placeholder */
+  background-color: #374151; /* Placeholder color */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Member name and role */
+.member-card h3 {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.member-card p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* keeps it above everything */
+}
+
+/* if you have text you want fixed too */
+.fixed-text {
+  position: fixed;
+  top: 100px; /* adjust how far below the header */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 999;
+}
+
+/* prevent content from hiding behind fixed header */
+body {
+  margin: 0;
+  padding-top: 80px; /* adjust depending on header height */
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-size: cover;        /* fills the entire screen */
+  background-repeat: no-repeat;  /* prevents repeating tiles */
+  background-position: center;   /* keeps image centered */
+  background-attachment: fixed;  /* makes it stay in place while scrolling */
+}
+
+/* example for each page */
+body#index {
+  background-image: url('https://i.pinimg.com/736x/a5/d7/4e/a5d74e89d8690687fc16d99b5967e127.jpg');
+}
+
+body#about {
+  background-image: url('https://i.pinimg.com/736x/4a/7e/9e/4a7e9edfe3a290594484b4d29abb8fa2.jpg');
+}
+
+body#contact {
+  background-image: url('https://i.pinimg.com/1200x/ba/99/b5/ba99b53c952e2acf1427c729de432822.jpg');
+}
+
+body#functions {
+  background-image: url('https://i.pinimg.com/originals/ae/a0/f7/aea0f717ac978941a65ef3d9e45cd89f.png');
+}
+
+body#morefunctions {
+  background-image: url('https://i.pinimg.com/1200x/5d/60/43/5d60435b60d5b3805890ccfa1b7fb7d3.jpg');
+}
+
+ h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px #ff0000, 4px 4px #ff9900;
+            margin: 0;
+	font-family: 'Rock Salt', cursive;
+        }
+ p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #ffd700;
+            text-shadow: 1px 1px #ff0000;
+		font-family: 'Rock Salt', cursive;
+ body {
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* extra height to show scrolling effect */
+            font-family: 'Rock Salt', cursive;
+            background-color: #000;
+            color: #fff;
+        }
+        }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 2000;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #ff3b3b;
+    text-shadow: 0 0 8px #ff3b3b, 0 0 15px #ff3b3b;
+}
