@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="IONOW.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock & Roll Vibes</title>
+
+<!-- Rock & Roll Font -->
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 200vh;
+        font-family: 'Rock Salt', cursive;
+        color: #fff;
+        background-image: url('https://i.pinimg.com/736x/a5/d7/4e/a5d74e89d8690687fc16d99b5967e127.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    /* Navbar identical to function.html */
+   
+
+    /* Intro section same as function.html */
+    .intro {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .intro h1 {
+        font-size: 4em;
+        text-shadow: 2px 2px #ff0000, 4px 4px #ff9900;
+        margin: 0;
+    }
+
+    .intro p {
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: #ffd700;
+        text-shadow: 1px 1px #ff0000;
+    }
+
+    .account-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 40px;
+        background-color: #ff3b3b;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: 0 0 15px #ff3b3b;
+        transition: 0.3s ease;
+    }
+
+    .account-btn:hover {
+        background-color: #d62d2d;
+        transform: scale(1.08);
+        box-shadow: 0 0 25px #ff3b3b;
+    }
+</style>
+</head>
+
+<body>
+<!-- Navbar identical to function.html -->
+<nav class="navbar">
+  <a href="FINGER.html" class="nav-btn">Home</a>
+  <a href="about.html" class="nav-btn">About Us</a>
+  <a href="contact.html" class="nav-btn">Contact Us</a>
+  <a href="function.html" class="nav-btn">Genres</a>
+  <a href="morefunction.html" class="nav-btn">Voting</a>
+</nav>
+
+<!-- Intro section -->
+<div class="intro">
+    <h1>Welcome to Music Central</h1>
+    <p>Feel the energy, see the opinions and talk about your favorite music</p>
+    <button class="account-btn" onclick="window.location.href='account.html'">Go to Account</button>
+</div>
+
+</body>
+</html>
